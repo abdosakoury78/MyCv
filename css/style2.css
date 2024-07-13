@@ -1,0 +1,37 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: #1b1b1b;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    gap: 20px;
+}
+
+h1 {
+    color: white;
+    font-size: 55px;
+    font-family: "Kanit", sans-serif;
+    font-weight: 500;
+}
+
+span {
+    color: #c19f37;
+    font-size: 70px;
+}
+
+.image {
+    background-image: url(../Images/photo.webp);
+    background-size: cover;
+    width: 450px;
+    height: 300px;
+    border-radius: 25px;
+}

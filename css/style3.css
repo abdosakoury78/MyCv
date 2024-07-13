@@ -1,0 +1,132 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color: rgb(18, 16, 29);
+    font-family: 'Exo 2', sans-serif;
+    overflow-x: hidden;
+}
+
+/* Header  */
+.header {
+    width: 100%;
+    height: 639px;
+}
+.content_images {
+    margin: 61px auto 0px auto;
+    position: relative;
+}
+.content_images .one,.content_images .two, .content_images .three, .content_images .shadow{
+    margin: 50px 75px;
+    box-shadow: 2px 22px 30px -10px #000;
+    position: absolute;
+    left: 15%;
+    animation-fill-mode: forwards;
+}
+.content_images .detail {
+    animation-fill-mode: forwards;
+    position: relative;
+    left: 15%;
+}
+/* shadows  */
+.shadow.first, .shadow.second, .shadow.third {
+    background-image: linear-gradient(to bottom, transparent 7%, #000);
+    width: 750px;
+    height: 69px;
+    position: absolute;
+    bottom: -502px;
+}
+/* end of shadows  */
+
+/* position for image, paragraph, link  */
+.detail img {
+    margin: 0px;
+    left: 95px;
+    top: 307px;
+    position: absolute;
+}
+.detail p {
+    position: absolute;
+    left: 521px;
+    top: 461px;
+    color: white;
+    font-size: 38px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-transform: uppercase;
+}
+.detail a {
+    position: absolute;
+    left: 524px;
+    top: 511px;
+    color: #2f9a3f;
+    font-size: 18px;
+    text-decoration: none;
+}
+.detail a:hover {
+    text-decoration: underline;
+}
+/* end of position for image, paragraph, link  */
+
+/* animation  */
+.content_images .one, .content_images .shadow.first, .detail.a {
+    animation-name: Move, back, again, back2;
+    animation-duration: 0.5s, 0.5s, 0.5s, 0.5s;
+    animation-delay: 3s, 9s, 12s, 18s;
+}
+.content_images .two, .content_images .shadow.second, .detail.b {
+    animation-name: next, Move, back, again;
+    animation-duration: 0.5s, 0.5s, 0.5s, 0.5s;
+    animation-delay: 3s, 6s, 12s, 15s;
+    left: 754px;
+    opacity: 0;
+}
+.content_images .three, .content_images .shadow.third, .detail.c {
+    animation-name: next, Move, back, again;
+    animation-duration: 0.5s, 0.5s, 0.5s, 0.5s;
+    animation-delay: 6s, 9s, 15s, 18s;
+    left: 754px;
+    opacity: 0;
+}
+@keyframes Move {
+    to {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+}
+@keyframes next {
+    to {
+        opacity: 1;
+        left: 15%;
+    }
+}
+@keyframes back {
+    25% {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0%);
+    }
+}
+@keyframes back2 {
+    25% {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0%);
+    }
+}
+@keyframes again {
+    to {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+}
+/* end of animation  */
+
+/* end of Header  */
